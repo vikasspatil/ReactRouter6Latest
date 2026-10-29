@@ -8,8 +8,8 @@ import { Page1 } from './pages/Page1';
 import { Page2 } from "./pages/Page2";
 import { UseRef } from './hooks/useref/UseRef';
 import { AppLayout } from './componants/Layout/AppLayout';
-import { UserProvider } from './hooks/usecontext/UserProvider';
-import { UseContext } from './hooks/usecontext/Index';
+import { FnContextProvider } from './hooks/usecontext/ContextProviderPage';
+import UserForm from './hooks/usestate/UserForm';
 
 
 function App() {
@@ -59,7 +59,8 @@ function App() {
           element: <Page2 pagetitle="Page 2" />
         },
         {path: "useref", element: <UseRef pagetitle={'User Ref'} />},
-        {path: "usecontext", element: <UseContext pagetitle={'Use Context'} />} 
+        {path: "usecontext", element: <FnContextProvider pagetitle={'Use Context'} />},
+        {path: "useState", element: <UserForm pagetitle={'Use State'} />}
       ]
     }
   ]);
@@ -72,9 +73,10 @@ function App() {
     )
   );*/
   return (
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>    
+    // <FnContextProvider>
+    //   <RouterProvider router={router} />
+    // </FnContextProvider>
+    <RouterProvider router={router} />
   )
 }
 
