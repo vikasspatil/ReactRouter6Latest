@@ -25,7 +25,7 @@ export const ContextPage = ({pagetitle}) => {
             <ul>                
                 {user.userArray.map((user, index) => (
                     <li key={index}>
-                        {user.myName} is {user.myAge} years old.
+                        {user.myName} is {user.myAge} years old. And he is from {user.village}
                     </li>
                 ))}
             </ul>

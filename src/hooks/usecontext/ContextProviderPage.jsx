@@ -14,9 +14,9 @@ export const FnContextProvider = ({pagetitle}) => {
     const userdata = { myName: "Vishal Patil", myAge: "35" };
     //03
     const userArray = [
-        { myName: "Vishal Patil", myAge: "35" },
-        { myName: "Santosh Bole", myAge: "38" },
-        { myName: "Ramesh Patil", myAge: "40" }
+        { myName: "Vishal Patil", myAge: "35", village: "Sangli" },
+        { myName: "Santosh Bole", myAge: "38", village: "Rajapur" },
+        { myName: "Ramesh Patil", myAge: "40", village: "Satara" }
     ];
 
     return (
