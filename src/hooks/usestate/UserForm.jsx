@@ -12,6 +12,7 @@ const emptyFormData = {
 function UserForm({ pagetitle }) {
     const [formData, setFormData] = useState(emptyFormData);
     const [feedback, setFeedback] = useState(null);
+    console.log("formData: ", formData);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
