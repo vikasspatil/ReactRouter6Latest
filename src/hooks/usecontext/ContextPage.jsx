@@ -15,11 +15,11 @@ export const ContextPage = ({pagetitle}) => {
 
             <p>
                 <strong>Veriable Data:</strong> <br />
-                My name is {user.myName} and I am {user.myAge} years old.
+                My name is {user.myName} and I am {user.myAge} years old. And I am from {user.village}.
             </p>
             <p>
                 <strong>Object Data:</strong> <br />                
-                My friend's name is {user.userdata.myName} and I am {user.userdata.myAge} years old.
+                My friend's name is {user.userdata.myName} and I am {user.userdata.myAge} years old. And he is from {user.userdata.village}.
             </p>
             <strong>Array Data:</strong> <br />
             <ul>                

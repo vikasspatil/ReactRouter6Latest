@@ -8,10 +8,11 @@ export const FnContextProvider = ({pagetitle}) => {
     //03. Array data can be provided by creating an array of objects with properties and values.
     
     //01
-    const myName = "Santosh Bole";
-    const myAge = 38;
+    const myName = "Vijay Patil";
+    const myAge = 56;
+    const village = "Latur";
     //02
-    const userdata = { myName: "Vishal Patil", myAge: "35" };
+    const userdata = { myName: "Santosh Lohar", myAge: "35", village: "Pune" };
     //03
     const userArray = [
         { myName: "Vishal Patil", myAge: "35", village: "Sangli" },
@@ -20,7 +21,7 @@ export const FnContextProvider = ({pagetitle}) => {
     ];
 
     return (
-        <FnContextCreate.Provider value={{ myName, myAge, userdata, userArray }}>
+        <FnContextCreate.Provider value={{ myName, myAge, village, userdata, userArray }}>
             <ContextPage pagetitle={pagetitle} />
         </FnContextCreate.Provider>
     );
