@@ -6,15 +6,7 @@ export const Navbar =()=>{
             <span className="nav-section-label">Explore</span>
             <NavLink to="/" end className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
             <div className="nav-dropdown">
-                <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                }
-                >
-                About
-                </NavLink>
-
+                <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
                 <div className="dropdown-menu">
                     <NavLink to="/about/page1" className={({isActive}) => isActive ? "dropdown-link active" : "dropdown-link"}>
                         Page 1
