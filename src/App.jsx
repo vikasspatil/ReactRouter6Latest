@@ -8,8 +8,9 @@ import { Page1 } from './pages/Page1';
 import { Page2 } from "./pages/Page2";
 import { UseRef } from './hooks/useref/UseRef';
 import { AppLayout } from './componants/Layout/AppLayout';
-import { FnContextProvider } from './hooks/usecontext/ContextProviderPage';
+import { FnContextProvider } from './hooks/context/ContextProviderPage';
 import UserForm from './hooks/usestate/UserForm';
+import { GlobalProvider } from './hooks/context/GlobalProvider';
 
 
 function App() {
@@ -76,7 +77,10 @@ function App() {
     // <FnContextProvider>
     //   <RouterProvider router={router} />
     // </FnContextProvider>
-    <RouterProvider router={router} />
+    <GlobalProvider>
+      <RouterProvider router={router} />
+    </GlobalProvider>
+    
   )
 }
 

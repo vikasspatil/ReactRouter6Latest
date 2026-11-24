@@ -29,6 +29,34 @@ export const ContextPage = ({pagetitle}) => {
                     </li>
                 ))}
             </ul>
+            <strong>API Data:</strong> <br />
+            {console.log(user.usersfromapi)}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>                        
+                        <th>Address</th>
+                        <th>Company</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {user.usersfromapi.map((user, index) => (
+                        <tr key={index}>
+                            <td>{user.id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>
+                                {user.address.street},
+                                {user.address.suite},
+                                {user.address.city}
+                            </td>
+                            <td>{user.company.name}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </>
     );
 };
