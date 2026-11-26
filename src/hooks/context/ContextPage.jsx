@@ -22,16 +22,21 @@ export const ContextPage = ({pagetitle}) => {
                 My friend's name is {user.userdata.myName} and I am {user.userdata.myAge} years old. And he is from {user.userdata.village}.
             </p>
             <strong>Array Data:</strong> <br />
-            <ul>                
-                {user.userArray.map((user, index) => (
-                    <li key={index}>
-                        {user.myName} is {user.myAge} years old. And he is from {user.village}
-                    </li>
-                ))}
+            <ul>
+                {user.userArray && user.userArray.length > 0 ? (
+                    user.userArray.map((user, index) => (
+                        <li key={index}>
+                            {user.myName} is {user.myAge} years old. And he is from {user.village}
+                        </li>
+                    ))
+                    ) : (
+                        <li>No data available</li>
+                    )
+                }                
             </ul>
             <strong>API Data:</strong> <br />
             {console.log(user.usersfromapi)}
-            <table>
+            <table width="100%">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -42,19 +47,29 @@ export const ContextPage = ({pagetitle}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {user.usersfromapi.map((user, index) => (
-                        <tr key={index}>
-                            <td>{user.id}</td>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
-                            <td>
-                                {user.address.street},
-                                {user.address.suite},
-                                {user.address.city}
-                            </td>
-                            <td>{user.company.name}</td>
+                    {user.usersfromapi && user.usersfromapi.length > 0 ? (
+                        user.usersfromapi.map((user, index) => (
+                            <tr key={user.id || index}>
+                                <td>{user.id}</td>
+                                <td>{user.name}</td>
+                                <td>
+                                    <a href={`mailto:${user.email}`} style={{ color: "blue" }}>
+                                        {user.email}
+                                    </a>
+                                </td>
+                                <td>
+                                    {user.address.street} <br />
+                                    {user.address.suite} <br />
+                                    {user.address.city}
+                                </td>
+                                <td>{user.company.name}</td>
+                            </tr>
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan="5">No data available</td>
                         </tr>
-                    ))}
+                    )}
                 </tbody>
             </table>
         </>
