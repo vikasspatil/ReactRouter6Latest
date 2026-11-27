@@ -20,6 +20,7 @@ export const Navbar =()=>{
             <NavLink to="/useref" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>useRef</NavLink>
             <NavLink to="/usecontext" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Context</NavLink>
             <NavLink to="/usestate" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Use State</NavLink>
+            <NavLink to="/rnd" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>R & D</NavLink>
         </nav>
     )
 }

@@ -1,7 +1,7 @@
-export const Page2 = () => {
+export const Page2 = ({pagetitle}) => {
     return (
         <div>
-            <h1 className="page-title">Page 2</h1>
+            <h1 className="page-title">{pagetitle}</h1>
         </div>
     )
 }

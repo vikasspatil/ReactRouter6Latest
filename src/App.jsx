@@ -7,6 +7,7 @@ import { About } from './pages/About';
 import { Page1 } from './pages/Page1';
 import { Page2 } from "./pages/Page2";
 import { UseRef } from './hooks/useref/UseRef';
+import { RnD } from './pages/RnD';
 import { AppLayout } from './componants/Layout/AppLayout';
 import { FnContextProvider } from './hooks/context/ContextProviderPage';
 import UserForm from './hooks/usestate/UserForm';
@@ -32,10 +33,10 @@ function App() {
     {
       path:'/',
       element: <AppLayout />,
-      errorElement: <ErrorPage />,
+      errorElement: <ErrorPage pagetitle={"Error Page"} />,
       children: [
-        {index: true, element: <Home pagetitle={'Home'} />},
-        {path: "about", element: <About pagetitle={'About'} />,
+        {index: true, element: <Home pagetitle={"Home"} />},
+        {path: "about", element: <About pagetitle={"About"} />,
           // Ase asel tar page about page madhe page1 ani page2 open hotil.
           /*children: [
             {
@@ -53,15 +54,16 @@ function App() {
         // About page madhe outlet comment karun thevaycha. Navbar madhe about dropdown madhe page1 ani page2 link add karayche.
         {
           path: "about/page1",
-          element: <Page1 pagetitle="Page 1" />
+          element: <Page1 pagetitle={"Page 1"} />
         },
         {
           path: "about/page2",
-          element: <Page2 pagetitle="Page 2" />
+          element: <Page2 pagetitle={"Page 2"} />
         },
-        {path: "useref", element: <UseRef pagetitle={'User Ref'} />},
-        {path: "usecontext", element: <FnContextProvider pagetitle={'Use Context'} />},
-        {path: "useState", element: <UserForm pagetitle={'Use State'} />}
+        {path: "useref", element: <UseRef pagetitle={"User Ref"} />},
+        {path: "usecontext", element: <FnContextProvider pagetitle={"Use Context"} />},
+        {path: "useState", element: <UserForm pagetitle={"Use State"} />},
+        {path: "rnd", element: <RnD pagetitle={"R & D"} />}
       ]
     }
   ]);

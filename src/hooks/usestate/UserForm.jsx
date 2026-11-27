@@ -57,7 +57,8 @@ function UserForm({ pagetitle }) {
 
     return (
         <div>
-            <h2>{pagetitle} : User Registration Form</h2>
+            <h1 className="page-title">{pagetitle}</h1>
+            <h2>User Registration Form</h2>
             <form className="registration-form" onSubmit={handleSubmit} noValidate>
                 <div className="form-fields">
                     <label className="form-field" htmlFor="firstName">

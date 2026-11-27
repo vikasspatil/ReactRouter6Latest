@@ -1,5 +1,5 @@
-export default function ErrorPage() {
+export default function ErrorPage({pagetitle}) {
   return (
-    <h1 className="page-title">Error</h1>
+    <h1 className="page-title">{pagetitle}</h1>
   );
 }

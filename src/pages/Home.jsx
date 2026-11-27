@@ -1,6 +1,6 @@
-function Home() {
+function Home({pagetitle}) {
   return (
-    <h1 className="page-title">Home</h1>
+    <h1 className="page-title">{pagetitle}</h1>
   )
 }
 
